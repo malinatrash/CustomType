@@ -7,7 +7,8 @@ namespace CustomType
     public class AppDelegate : NSApplicationDelegate
     {
         public AppDelegate()
-        {/*caret*/
+        {
+            /*caret*/
         }
 
         public override void DidFinishLaunching(NSNotification notification)
