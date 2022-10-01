@@ -14,6 +14,12 @@ namespace CustomType
 	partial class ViewController
 	{
 		[Outlet]
+		AppKit.NSTextField blueLabel { get; set; }
+
+		[Outlet]
+		AppKit.NSTextField blueTF { get; set; }
+
+		[Outlet]
 		AppKit.NSSlider colorHue { get; set; }
 
 		[Outlet]
@@ -26,7 +32,16 @@ namespace CustomType
 		AppKit.NSColorWell colorView { get; set; }
 
 		[Outlet]
-		AppKit.NSTextField rgbValue { get; set; }
+		AppKit.NSTextField greenLabel { get; set; }
+
+		[Outlet]
+		AppKit.NSTextField greenTF { get; set; }
+
+		[Outlet]
+		AppKit.NSTextField redLabel { get; set; }
+
+		[Outlet]
+		AppKit.NSTextField redTF { get; set; }
 
 		[Action ("changeHue:")]
 		partial void changeHue (AppKit.NSSlider sender);
@@ -37,8 +52,8 @@ namespace CustomType
 		[Action ("changeValue:")]
 		partial void changeValue (AppKit.NSSlider sender);
 
-		[Action ("setColor:")]
-		partial void setColor (AppKit.NSButton sender);
+		[Action ("refreshColor:")]
+		partial void refreshColor (AppKit.NSButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
@@ -62,9 +77,34 @@ namespace CustomType
 				colorView = null;
 			}
 
-			if (rgbValue != null) {
-				rgbValue.Dispose ();
-				rgbValue = null;
+			if (redLabel != null) {
+				redLabel.Dispose ();
+				redLabel = null;
+			}
+
+			if (redTF != null) {
+				redTF.Dispose ();
+				redTF = null;
+			}
+
+			if (greenLabel != null) {
+				greenLabel.Dispose ();
+				greenLabel = null;
+			}
+
+			if (greenTF != null) {
+				greenTF.Dispose ();
+				greenTF = null;
+			}
+
+			if (blueLabel != null) {
+				blueLabel.Dispose ();
+				blueLabel = null;
+			}
+
+			if (blueTF != null) {
+				blueTF.Dispose ();
+				blueTF = null;
 			}
 
 		}
